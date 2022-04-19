@@ -36,13 +36,32 @@ EXEMPLO 2
 """
 EXEMPLO 3 - GERENCIADOR DE CONTEXTO
 A DIFERENÇA QUE NAO PRECISA MANDAR FECHAR O ARQUIVO
+W - ESCREVE
+R - APENA LE
+A -  ATIVA O APPEND MODE, ADICIONA COISAS NO ARQUIVO SEM APAGAR 
 """
-with open('abc.txt', 'w+') as file:
-    file.write('Linha 1\n')
-    file.write('Linha 2\n')
-    file.write('Linha 3\n')
+# with open('abc.txt', 'w+') as file:
+#     file.write('Linha 1\n')
+#     file.write('Linha 2\n')
+#     file.write('Linha 3\n')
+#
+#     file.seek(0)
+#     print(file.read())
 
-    file.seek(0)
+"""
+EXEMPLO 4 - CRIANDO OUTRA LINHA
+DIFERENÇA ENTRE A+ E W+ É QUE O W+ APAGA AS ESCRITAS TODA VEZ QUE É EXECUTADO 
+A+ VAI ESCREVENDO NA LINHA DEBAIXO SEM APAGAR OS ANTERIORES
+"""
+with open('abc.txt', 'a+') as file:
+    file.write('Outra linha\n')
+    file.write('Outra linha2\n')
     print(file.read())
+
+import os
+
+os.remove('abc.txt') # APAGA O ARQUIVO :(
+
+
 
 # HTTPS://DOCS.PYTHON.ORG/3/LIBRARY/FUNCTIONS.HTML#OPEN
