@@ -1,0 +1,13 @@
+"""
+"""
+"""
+A IMPORTAÇÃO A SEGUIR NÃO VAI FUNCIONAR POIS NO PYTHON AS IMPORTAÇÕES
+FUNCIONAM DO ARQUIVO DE ENTRADA PARA FRENTE.( ARQUIVO DE ENTRADA É TODO AQUELE QUE É 
+CONSIDERADO __MAIN__ O PRIMEIRO A SER EXECUTADO ).
+"""
+
+
+from pacote_um.modulo_um import variavel1
+variavel2 = 'variavel2'
+
+print(variavel1)
